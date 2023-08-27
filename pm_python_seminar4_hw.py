@@ -52,25 +52,25 @@
 # кустом, собирает ягоды с этого куста и с двух соседних с ним.
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль,
 # находясь перед некоторым кустом заданной во входном файле грядки.
-def max_berries(garden):
-    n = len(garden)
-    max_berries = 0
-
-    for i in range(n):
-        berries = garden[i] + garden[(i - 1) % n] + garden[
-            (i + 1) % n]  # суммируем ягоды с текущего куста и двух соседних
-        max_berries = max(max_berries, berries)  # обновляем максимальное число ягод
-
-    return max_berries
-
-
-# Пример использования
-garden = []
-n = int(input("Введите количество кустов черники: "))
-print("Введите количество ягод на каждом кусте:")
-for i in range(n):
-    berries = int(input())
-    garden.append(berries)
-
-max_berries = max_berries(garden)
-print(f"Максимальное число ягод: {max_berries}")
+# def max_berries(garden):
+#     n = len(garden)
+#     max_berries = 0
+#
+#     for i in range(n):
+#         berries = garden[i] + garden[(i - 1) % n] + garden[
+#             (i + 1) % n]  # суммируем ягоды с текущего куста и двух соседних
+#         max_berries = max(max_berries, berries)  # обновляем максимальное число ягод
+#
+#     return max_berries
+#
+#
+# # Пример использования
+# garden = []
+# n = int(input("Введите количество кустов черники: "))
+# print("Введите количество ягод на каждом кусте:")
+# for i in range(n):
+#     berries = int(input())
+#     garden.append(berries)
+#
+# max_berries = max_berries(garden)
+# print(f"Максимальное число ягод: {max_berries}")
